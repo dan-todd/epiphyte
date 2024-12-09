@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>No, I don’t want to fill out your contact form - Adam Jones&#39;s Blog - epiphyte</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">epiphyte</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">No, I don’t want to fill out your contact form - Adam Jones&#39;s Blog</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1729224327145"
+                  >2024-10-18 14:05</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1729224327145"
+                  >2024-10-18 14:05</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p><em>This article is written solely in my personal capacity, and does not represent the views of any organisations I am affiliated with.</em></p>
+<p>Contact forms are almost always worse for users than just putting an email on your website. I explore why they’re terrible, why you’ve done it anyway, and what to do about it.</p>
+<h3 id="your-contact-form-is-completely-broken">Your contact form is completely broken</h3>
+<p>It’s remarkable how many contact forms are just straight-up broken. A WordPress upgrade here, a change to your CRM there, and your contact form silently breaks.</p>
+<p>At time of writing, B&amp;Q’s contact form just plainly doesn’t work<a title="#user-content-fn-1" href="#user-content-fn-1">1</a>. I am fairly amazed that a retailer with <a title="https://en.wikipedia.org/wiki/B%26Q" href="https://en.wikipedia.org/wiki/B%26Q">revenues in the billions</a> doesn’t notice written queries have stopped coming in.</p>
+<p><img src="/_resources/dfc3138cf5f043129c6f97f0f350fc66.png" /></p>
+<p>(as a side note: your form should have <a title="https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f" href="https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f">better error messages</a>. The error above gives the user no way out, given that trying again would not help)</p>
+<p>This is not an isolated incident. I’ve been stung by broken contact forms on all kinds of websites, from many other big and small organisations. <a title="https://news.ycombinator.com/item?id=38554522" href="https://news.ycombinator.com/item?id=38554522">AWS’s abuse contact form has been broken for months</a>. And here’s a particularly gnarly example from <a title="https://www.elastoplast.co.uk/pages/contact" href="https://www.elastoplast.co.uk/pages/contact">Elastoplast</a>, one of the largest plaster brands in the UK:</p>
+<p><img src="/_resources/673658dd09d74d1d800eaafefb57378b.png" /></p>
+<h3 id="your-contact-form-is-broken-for-some-users">Your contact form is broken for some users</h3>
+<p>Axa, an insurer with almost <a title="https://www.axa-im.com/who-we-are/axa-im-numbers" href="https://www.axa-im.com/who-we-are/axa-im-numbers">a trillion euros of assets under management</a>, offers <a title="https://customer.axa.co.uk/contact/email-general/" href="https://customer.axa.co.uk/contact/email-general/">a contact form</a> that looks like it’s time travelled from the early 2000s. Unfortunately, it doesn’t seem like that time has made it work better: it incorrectly rejects some valid emails<a title="#user-content-fn-2" href="#user-content-fn-2">2</a> and doesn’t show all the relevant Axa products.</p>
+<p><img src="/_resources/b01e03cf8e3b468bacabab26044124f8.png" /></p>
+<p>Vodafone, a major UK mobile network, has <a title="https://www.vodafone.co.uk/webcenter/portal/myvodafone/lostandstolen" href="https://www.vodafone.co.uk/webcenter/portal/myvodafone/lostandstolen">a form to report devices lost and stolen</a>. However, their site is frequently unavailable for maintenance overnight. I can’t imagine how frustrating having a phone stolen, only to try to report it and be presented with this:</p>
+<p><img src="/_resources/ce78384b74af4986b6fc3c4c69b02505.png" /></p>
+<p>Finally, a lot of contact forms do not meet basic web accessibility standards, making it hard for assistive technology users to properly complete them. For example, <a title="https://www.virginmedia.com/help/virgin-mobile-complaint" href="https://www.virginmedia.com/help/virgin-mobile-complaint">Virgin Mobile’s complaint page</a> is nearly unnavigable by keyboard due to hiding any kind of selection indicators.</p>
+<h3 id="your-contact-form-takes-ages-to-fill-out">Your contact form takes ages to fill out</h3>
+<p>I’m not sure how it’s been achieved, but the <a title="https://forms.charitycommission.gov.uk/Complaints-to-the-Charity-Commission-for-England-and-Wales/" href="https://forms.charitycommission.gov.uk/Complaints-to-the-Charity-Commission-for-England-and-Wales/">UK’s Charity Commission’s complaints form</a> takes about 6-7 seconds to load every single page! It offers no indication of progress, and you have to get through 11 pages to complete it.</p>
+<p><img src="/_resources/92cb7f86a50144f1bfbd9582661c9159.png" /></p>
+<p>At this rate, you spend <strong>75 seconds</strong> just waiting for pages in the form to load.</p>
+<p>And that’s not including the time to answer the questions asked - or even processing some of them. Don’t worry, you’ll get to review each one carefully because none of them have <a title="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete attributes</a> set.</p>
+<p>You’ll also have to read through all the options in this monstrosity of a dropdown - which is helpfully not grouped or sorted in any coherent way:</p>
+<p><img src="/_resources/62f46a13ba7e46dca41d43acc4682305.png" /></p>
+<p>(Additionally, this question doesn’t make sense to ask in the first place. The complaint is about a service by the Charity Commission, after answering ‘No’ to the question ‘Does your question or query relate to a specific registered charity?’)</p>
+<h3 id="your-contact-form-asks-for-irrelevant-personal-information">Your contact form asks for irrelevant personal information</h3>
+<p>National Grid has <a title="https://www.nationalgrid.co.uk/contact-us/contacting-national-grid-electricity-distribution/general-contact-enquiries" href="https://www.nationalgrid.co.uk/contact-us/contacting-national-grid-electricity-distribution/general-contact-enquiries">contact</a> and <a title="https://www.nationalgrid.co.uk/contact-us/contacting-national-grid-electricity-distribution/feedback-and-compliments" href="https://www.nationalgrid.co.uk/contact-us/contacting-national-grid-electricity-distribution/feedback-and-compliments">feedback</a> forms.<a title="#user-content-fn-3" href="#user-content-fn-3">3</a> I might want to give them some minor feedback like ‘hey this link on your site is broken’, however I then need to figure out whether I really want to provide all my personal details to do this - like my home address and phone number (or at least make up something that looks plausible).</p>
+<p>I’ve also seen some complaints forms asking for more sensitive data, like date of birth or copies of ID documents. Sometimes this is despite them not holding this information in the first place, so they’re not comparing it to what they have on record as a security measure.<a title="#user-content-fn-4" href="#user-content-fn-4">4</a></p>
+<p>You do need to collect some contact details, but do you really need <strong>three</strong> different contact methods to respond to some off-hand feedback? Other things you probably don’t actually need on a general contact form include <a title="https://writefulcopy.com/blog/why-title-should-not-be-a-required-field-on-online-forms" href="https://writefulcopy.com/blog/why-title-should-not-be-a-required-field-on-online-forms">title</a>, job function, company size, and <a title="https://www.bbc.co.uk/news/business-56831212" href="https://www.bbc.co.uk/news/business-56831212">landline</a> number.</p>
+<p>This unnecessarily increases the risk of my data being stolen and used for identity fraud. For less trustworthy organisations, this also directly increases the chance I get spam - so I either don’t submit the form, or <a title="https://www.reddit.com/r/CasualUK/comments/1b6up7p/does_anyone_actually_give_their_email_address/" href="https://www.reddit.com/r/CasualUK/comments/1b6up7p/does_anyone_actually_give_their_email_address/">make up data</a>.</p>
+<h3 id="your-contact-form-is-less-useful-for-customers">Your contact form is less useful for customers</h3>
+<p>Email allows customers to create drafts, schedule messages, and easily keep a record of what’s been said. It also often integrates into their workflows more easily, for example the ability to <a title="https://support.google.com/mail/answer/7622010" href="https://support.google.com/mail/answer/7622010">snooze emails</a> to chase up on them later.</p>
+<p>Your form likely doesn’t have any of these features. In fact, even if it’s fully working users often don’t get any form of confirmation they can refer back to later, let alone a confirmation that contains all the details they submitted.</p>
+<p>I’m not certain there is malicious intent behind it, but I have experienced several companies ‘accidentally’ losing form submissions, only to mysteriously find them again once I pull up copies of the form I saved a screenshot of. If you’re forcing your customers to do this, you’re doing it wrong.</p>
+<h3 id="your-contact-form-is-wasting-your-resources">Your contact form is wasting your resources</h3>
+<p>It takes time and energy to build and maintain a contact form properly. It almost always gets routed to an email behind the scenes (or a system that accepts email), so skip the middleman and put up the email address!</p>
+<p>It also can mean that customers contacting you can’t remember what their original message was about. I’ve experienced getting a response from an organisation and then having to ask them what the original query was about - had this been an email in the first place this could have been avoided.</p>
+<h3 id="your-contact-form-is-irritating-in-other-ways">Your contact form is irritating in other ways</h3>
+<p>There are probably hundreds of ways you could set up your contact form to be maximally irritating, and I can’t cover them all here. I’ll leave you with one final example that doesn’t fit into the categories above though.</p>
+<p>Sainsbury’s has a <a title="https://help.sainsburys.co.uk/help/contact-us" href="https://help.sainsburys.co.uk/help/contact-us">contact form</a> that forces you to navigate down a long options tree. Only to open a modal and ask you to select the topic again. They then present the tiniest form window ever, which makes it near impossible to fill out:</p>
+<p><img src="/_resources/4aae02cbab7d402c98aa1bd45212b444.gif" /></p>
+<h2 id="why-youve-done-this-and-what-to-do-instead">Why you’ve done this, and what to do instead</h2>
+<p>Beyond just ‘it’s what we’ve always done’, there are a few reasons you might think a contact form is a good idea. Here we’ll go through some of them and what you might do instead.</p>
+<h3 id="to-collect-structured-data-that-speeds-up-resolving-problems">To collect structured data that speeds up resolving problems</h3>
+<p>You might want to use a contact form to collect structured data, so it saves you time processing requests. For example, making sure the customer provides the right identifiers for you to find them on your systems quickly, or automatically assigning queries to the right teams.</p>
+<p>This <em>can</em> be okay in some circumstances. Amazon does this well: it shows you the recent items you’ve purchased and also allows you to completely self-serve common customer service workflows (like requesting a return) - while still allowing you to speak to a human fairly easily.</p>
+<p>However, unless you’ve got an excellent customer service portal (you probably don’t), you should just stick with an email for general contact purposes.</p>
+<p>To make sure you have the right details, just set up a sensible auto-reply. Here’s a good example from GP at hand:<a title="#user-content-fn-5" href="#user-content-fn-5">5</a></p>
+<p><img src="/_resources/e6e08769ca484aa9ac3fdc9a43323e3b.png" /></p>
+<p>You could also encourage users to provide the right details upfront by using <a title="https://mailtolinkgenerator.com/" href="https://mailtolinkgenerator.com/">mailto links</a> with appropriate parameters, such as <a title="mailto:support@example.com?subject=Support%20query%20based%20on%20webpage%20'Inviting%20other%20users'&amp;body=Related%20support%20page%3A%20https%3A%2F%2Fexample.com%2Fhelp%2Finviting-other-users%0AFull%20name%3A%20%0AAccount%20number%20(if%20relevant)%3A%20%0A%0A%5BYour%20support%20query%20here%5D" href="mailto:support@example.com?subject=Support%20query%20based%20on%20webpage%20" inviting%20other%20users'&body="Related%20support%20page%3A%20https%3A%2F%2Fexample.com%2Fhelp%2Finviting-other-users%0AFull%20name%3A%20%0AAccount%20number%20(if%20relevant)%3A%20%0A%0A%5BYour%20support%20query%20here%5D'">support@example.com</a>.<a title="#user-content-fn-mailto_credit" href="#user-content-fn-mailto_credit">6</a></p>
+<p>Next, before automating assigning queries to the right teams, consider whether you need to do this: I’ve seen very small teams try to justify ‘a contact form will help us categorise emails’ when they receive two emails a day, or they all go to the same person anyways.</p>
+<p>If you really do need to automate assigning emails, take a look at platforms like <a title="https://support.zendesk.com/hc/en-us/articles/5608652527386-Getting-started-with-Zendesk-AI-and-Advanced-AI#h_01HH0BTYYBV6ETWHG8779M9Y8C" href="https://support.zendesk.com/hc/en-us/articles/5608652527386-Getting-started-with-Zendesk-AI-and-Advanced-AI#h_01HH0BTYYBV6ETWHG8779M9Y8C">Zendesk and their AI systems</a> - this kind of thing is exactly what <a title="https://en.wikipedia.org/wiki/Large_language_model" href="https://en.wikipedia.org/wiki/Large_language_model">LLMs</a> thrive at (or often just <a title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expressions</a> will get you far enough).</p>
+<h3 id="you-want-people-to-contact-you-and-think-your-form-will-lower-the-barrier">You want people to contact you, and think your form will lower the barrier</h3>
+<p>Empirically, this doesn’t hold up. I previously thought this was true, but I’ve since seen at 3 different organisations who’ve made the switch that this doesn’t seem to be the case - i.e. they get the same number of genuine contacts by listing an email as having a contact form. I’d love to rigorously analyse and publish the data on this to help convince others.</p>
+<p>One category where this might not be true by default is for very ‘low-effort’ feedback forms. I think this can probably be mitigated by making it clear that you’re friendly and would be happy to receive informal emails.</p>
+<p>The other category where I think this might be more likely to lower the barrier is where people prefer to be anonymous. For example, someone who might not be public about their sexual orientation might not want to have related comments so easily linked back to them, but still want to give feedback on some article. The UK Government website, GOV.UK, has a delightfully simple example that works well for collecting anonymous feedback:</p>
+<p><img src="/_resources/cb85cf40944a47a1b288ac1327a235f1.png" /></p>
+<h3 id="youre-worried-youll-get-spam-if-you-list-an-email-online">You’re worried you’ll get spam if you list an email online</h3>
+<p>Surprisingly, not really. I found we often ended up getting <em>less</em> spam compared to WordPress forms - there might be something about it being easier to submit anonymous forms with rubbish, compared to actually sending emails with decent enough reputation to get past today's spam filters.</p>
+<p>If you really worry about this, you can <a title="https://superuser.com/questions/235937/does-e-mail-address-obfuscation-actually-work" href="https://superuser.com/questions/235937/does-e-mail-address-obfuscation-actually-work">obfuscate your email from spam bots</a>. But I think this is usually wasted time given just how rare this kind of email spam is, and how good spam filters have gotten. Plus this risks you messing this up and breaking something.</p>
+<h3 id="you-want-to-manage-messages-as-a-team">You want to manage messages as a team</h3>
+<p>You can do this with email! Hook up a <a title="https://support.microsoft.com/en-gb/office/open-and-use-a-shared-mailbox-in-outlook-d94a8e9e-21f1-4240-808b-de9c9c088afd" href="https://support.microsoft.com/en-gb/office/open-and-use-a-shared-mailbox-in-outlook-d94a8e9e-21f1-4240-808b-de9c9c088afd">shared mailbox</a>, <a title="https://support.google.com/a/users/answer/167430" href="https://support.google.com/a/users/answer/167430">collaborative inbox</a>, or one of the many off-the-shelf customer service solutions like <a title="https://www.zendesk.co.uk/service/ticketing-system/customer-service-email-management-software/" href="https://www.zendesk.co.uk/service/ticketing-system/customer-service-email-management-software/">Zendesk</a>, <a title="https://www.zoho.com/desk/" href="https://www.zoho.com/desk/">Zoho Desk</a>, <a title="https://www.freshworks.com/freshdesk/" href="https://www.freshworks.com/freshdesk/">Freshdesk</a>, <a title="https://github.com/bestpractical/rt" href="https://github.com/bestpractical/rt">Request Tracker</a><a title="#user-content-fn-6" href="#user-content-fn-6">7</a>, <a title="https://zammad.org/" href="https://zammad.org/">Zammad</a>, <a title="https://osticket.com/" href="https://osticket.com/">osTicket</a> or <a title="https://freescout.net/" href="https://freescout.net/">FreeScout</a> to your email.</p>
+<h3 id="you-think-email-isnt-secure-enough">You think email isn’t secure enough</h3>
+<p>Email used to be very insecure because it wasn’t encrypted.<a title="#user-content-fn-7" href="#user-content-fn-7">8</a> This meant that people between mail servers could read the contents of messages.</p>
+<p>However, unless you’ve done something weird with your email setup, it’ll probably be encrypted securely like <a title="https://transparencyreport.google.com/safer-email/overview" href="https://transparencyreport.google.com/safer-email/overview">99% of other email traffic</a> is in 2024.</p>
+<p>In theory, your customer might be using an email provider that doesn’t support encryption - which could lead them to sending something to you insecurely and putting them at risk. I think most organisations can accept this risk given how rare this is, given that this is on the customer’s end. For what it’s worth, the UK’s National Cyber Security Centre <a title="https://www.ncsc.gov.uk/organisation/ncsc" href="https://www.ncsc.gov.uk/organisation/ncsc">is happy to list a contact email for themselves</a>.</p>
+<p>Another question to ask yourself if you don’t list an email for this reason: do you respond via email after people contact you?</p>
+<h3 id="you-think-email-isnt-accessible-to-assistive-technology-users">You think email isn't accessible to assistive technology users</h3>
+<p>I've heard the claim that you need a contact form to be compliant with some common accessibility standard - this is simply not true. If you don't beleive me, try and actually find this rule.<a title="#user-content-fn-8" href="#user-content-fn-8">9</a></p>
+<p>Listing an email is almost certainly easier to parse and understand than your contact form.</p>
+<h3 id="you-dont-want-people-to-fill-in-your-form">You don't want people to fill in your form</h3>
+<p>Yeah - this is one I'm not really here to help you with.</p>
+<p>There are some organisations that intentionally want their form to be difficult to complete - perhaps it’s a regulatory requirement that you don’t really want to comply with. If you’re doing this, you should probably feel bad.</p>
+<p>It’s unclear how intentional this is, but in this vein Meta (Facebook) makes it very difficult to contact them about data protection matters. Some charities <a title="https://noyb.eu/en/no-bullsht-opt-out-free-noyb-tool-quick-and-broad-facebook-objections" href="https://noyb.eu/en/no-bullsht-opt-out-free-noyb-tool-quick-and-broad-facebook-objections">have already highlighted</a> that Meta’s forms seem to be particularly difficult to find, and difficult to complete. My own experiences with this process have been complex and drawn out, having been referred to several different broken forms.</p>
+<p>Regulators should be doing a better job ensuring they are setting the bar appropriately in these cases, in a way that rewards actors who are complying with both the letter and spirit of laws or regulations.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Contact forms are hard to get right, and often just a worse experience for everyone involved. Go forth and remove your contact form and list your email on your website now!</p>
+<h2 id="footnotes">Footnotes</h2>
+<ol>
+<li>
+<p>As in, it’s impossible to submit from the website - the error appears when submitting. Inspecting the network requests suggests this error is because a ‘title’ property is missing: likely some mismatch between the backend and the frontend (there is no title field on the frontend). Yes, these problems happen in software development from time to time: but there’s no need to incur this if email already ‘just works’. <a title="#user-content-fnref-1" href="#user-content-fnref-1">↩</a></p>
+</li>
+<li>
+<p><code>test+test@example.com</code>, <code>tést@example.com</code> and <code>test@éxample.com</code> are all valid emails as per <a title="https://www.rfc-editor.org/rfc/rfc6532" href="https://www.rfc-editor.org/rfc/rfc6532">RFC 6532</a>, but are all rejected by this form <a title="#user-content-fnref-2" href="#user-content-fnref-2">↩</a></p>
+</li>
+<li>
+<p>As a fun side bonus, if you make a single mistake on this form it deletes everything and forces you to start from scratch. For example, if you format your phone number ‘wrong’, your entire message you typed up is wiped. <a title="#user-content-fnref-3" href="#user-content-fnref-3">↩</a></p>
+</li>
+<li>
+<p>I don't think people's birthdays should be a security measure, but unfortunately it seems to be the world we live in. I'll have to explore this in another rant. <a title="#user-content-fnref-4" href="#user-content-fnref-4">↩</a></p>
+</li>
+<li>
+<p>It could probably place this a bit more prominently by cutting some of the other stuff, but on the whole the message is fairly clear and not an unreasonable length. <a title="#user-content-fnref-5" href="#user-content-fnref-5">↩</a></p>
+</li>
+<li>
+<p>Thanks to foreigner for <a title="https://news.ycombinator.com/item?id=40258213" href="https://news.ycombinator.com/item?id=40258213">the recommendation</a>. <a title="#user-content-fnref-mailto_credit" href="#user-content-fnref-mailto_credit">↩</a></p>
+</li>
+<li>
+<p>Thanks to amluto for <a title="https://news.ycombinator.com/item?id=40257941" href="https://news.ycombinator.com/item?id=40257941">the recommendation</a>. <a title="#user-content-fnref-6" href="#user-content-fnref-6">↩</a></p>
+</li>
+<li>
+<p>There are also other email security risks, such as email spoofing (solvable with <a title="https://en.wikipedia.org/wiki/DMARC" href="https://en.wikipedia.org/wiki/DMARC">DMARC</a>!). But on the whole, the email security risk seems overblown (especially compared to 'crappy WordPress form' security risk). <a title="#user-content-fnref-7" href="#user-content-fnref-7">↩</a></p>
+</li>
+<li>
+<p>Further examples that would seem to suggest that this is not necessary is that the following organisations list an email to contact them: <a title="https://www.equalityhumanrights.com/contact-us" href="https://www.equalityhumanrights.com/contact-us">Equality and Human Rights Commission</a> (the public body responsible for disability rights), <a title="https://www.scope.org.uk/contact-us/" href="https://www.scope.org.uk/contact-us/">Scope</a> (a major disability equality charity) and <a title="https://abilitynet.org.uk/how-contact-us" href="https://abilitynet.org.uk/how-contact-us">AbilityNet</a> (a charity building assistive technologies). <a title="#user-content-fnref-8" href="#user-content-fnref-8">↩</a></p>
+</li>
+</ol>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
